@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: Icons.java
-Description: This class setup all the icons for board to use
-Major Skills: objects and methods, arrays and import.
-*/
+// Loads the image assets used by the game.
 
 //import 
 import java.awt.Image;

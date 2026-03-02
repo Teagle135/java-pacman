@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: PacManTitleFrame.java
-Description: This class display the title frame of the pacman game.
-Major Skills: Methods and Objects, if - else statement, for loop, while loop, swing gui element, arrays, arraylist, list.
-*/
+// Builds the title screen and menu actions.
 
 //import
 import java.awt.Color;
@@ -81,7 +74,7 @@ public class PacManTitleFrame extends JFrame implements ActionListener {
 		}
 		// Setup the Frame
 		setSize(650, 750);
-		setTitle("Tony Ren - PacMan Game");
+		setTitle("Pac-Man Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		getContentPane().setBackground(Color.BLACK);

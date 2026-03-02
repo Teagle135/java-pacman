@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: Mover.java
-Description: This is a template class of mover such as pacman and ghost
-Major Skills: import,  if-else statement and object and methods
-*/
+// Base class for Pac-Man and ghost movement state.
 
 //import 
 import javax.swing.JLabel;

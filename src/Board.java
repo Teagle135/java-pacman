@@ -1,12 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: Board.java
-Description: This class display the game board of the pacman game.
-Major Skills: Methods and Objects, if - else statement, for loop, while loop, swing gui element, arrays, arraylist, list, 
-fileinput, bufferedreader, scanner and gametimer.
-*/
+// Handles board state, movement, collisions, and score updates.
 
 //Import 
 import java.awt.Color;
@@ -659,23 +651,28 @@ public class Board extends JPanel implements KeyListener, ActionListener {
 	private void modifyLeaderboard() {
 		// Create a list to store the modified lines of the leaderboard file
 		List<String> newLines = new ArrayList<>();
+		String trimmedUsername = username == null ? "" : username.trim();
+		String recordedName = trimmedUsername.isEmpty() ? "Player" : trimmedUsername;
+		java.nio.file.Path leaderboardPath = Paths.get("Leaderboard.csv");
 
 		try {
-			// Read all existing lines from the leaderboard file
-			for (String line : Files.readAllLines(Paths.get("Leaderboard.csv"), StandardCharsets.UTF_8)) {
-				newLines.add(line);
+			// Read all existing lines from the leaderboard file when it already exists.
+			if (Files.exists(leaderboardPath)) {
+				for (String line : Files.readAllLines(leaderboardPath, StandardCharsets.UTF_8)) {
+					newLines.add(line);
+				}
 			}
-
-			// Add a new entry with username and hiscore to the list
-			newLines.add(((String) username) + "," + hiscore);
 		} catch (IOException e) {
 			// Handle and log any IOException that may occur during file reading
 			e.printStackTrace();
 		}
 
+		// Add a new entry with username and hiscore to the list
+		newLines.add(recordedName + "," + hiscore);
+
 		try {
 			// Write the modified lines back to the leaderboard file
-			Files.write(Paths.get("Leaderboard.csv"), newLines, StandardCharsets.UTF_8);
+			Files.write(leaderboardPath, newLines, StandardCharsets.UTF_8);
 		} catch (IOException e) {
 			// Handle and log any IOException that may occur during file writing
 			e.printStackTrace();

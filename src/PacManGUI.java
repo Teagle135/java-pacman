@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: PacManGUI.java
-Description: This class display the game frame of the pacman game.
-Major Skills: Methods and Objects, if - else statement, for loop, while loop, swing gui element, arrays, arraylist, list.
-*/
+// Builds the main game window and HUD.
 
 //Import
 import java.awt.*;
@@ -63,7 +56,7 @@ public class PacManGUI extends JFrame {
 		}
 		// Setup the Frame
 		setSize(650, 750);
-		setTitle("Tony Ren - PacMan Game");
+		setTitle("Pac-Man Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		getContentPane().setBackground(Color.BLACK);

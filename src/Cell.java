@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-03 Mr.Fernandes
-Title: Cell.java
-Description: This is a class that save the maze.txt's each character and assign it to different icons
-Major Skills: import,  if-else statement and object and methods
-*/
+// Maps maze characters to display icons.
 
 //import
 import javax.swing.*;

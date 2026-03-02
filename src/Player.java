@@ -1,11 +1,4 @@
-/*Header
-Name: Tony Ren
-Date: 2023-12-15
-Course Code: ICS3U1-08 Mr.Fernandes
-Title: Player.java
-Description: This is a template file of the object player, which is used to save users score and name.
-Major Skills: object and methods
-*/
+// Stores leaderboard player data.
 
 //Player object
 public class Player {
